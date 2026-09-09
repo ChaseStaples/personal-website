@@ -3,6 +3,8 @@
 A static personal portfolio site: home page, projects, dashboard, launchpad,
 and a sign-in / one-time-code flow.
 
+https://chasestaples.github.io/personal-website
+
 ## Pages
 
 - `index.html` — home / landing page
