@@ -23,4 +23,9 @@ accounts, sessions, or security.
 ## Hosting
 
 This is a fully static site (plain HTML/CSS/JS, relative paths only) and is
-deployed via GitHub Pages.
+built to be deployed via GitHub Pages. It is not yet live: the repo has no
+GitHub remote configured. To deploy, push this repo to a new GitHub
+repository (e.g. `ChaseStaples/personal-website`) and enable Pages in the
+repo's Settings > Pages, serving from the `main` branch, root folder. A
+`.nojekyll` file is already included so GitHub's default Jekyll processing
+is skipped.
