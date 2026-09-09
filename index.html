@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chase Staples — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="#hero" class="brand">Chase<em>.</em>Staples</a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="launchpad.html">Launchpad</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li id="acctSlot"><a href="login.html" class="acct"><i class="fas fa-arrow-right-to-bracket"></i> Sign in</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="#hero">Home</a>
+    <a href="#skills">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="launchpad.html">Launchpad</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="login.html" id="acctSlotMobile">Sign in</a>
+  </div>
+</header>
+
+<section id="hero">
+  <div class="bubbles" aria-hidden="true">
+    <!-- back layer: smaller, slower, dimmer, for depth -->
+    <div class="bubbles-back">
+      <div class="bubble" style="left:6%;width:38px;height:38px;font-size:1rem;opacity:.55;animation-duration:19s;animation-delay:-2s;--drift:-14px;"><i class="fab fa-css3-alt"></i></div>
+      <div class="bubble" style="left:22%;width:30px;height:30px;font-size:.85rem;opacity:.45;animation-duration:23s;animation-delay:-9s;--drift:18px;"><i class="fab fa-java"></i></div>
+      <div class="bubble" style="left:48%;width:34px;height:34px;font-size:.9rem;opacity:.5;animation-duration:21s;animation-delay:-14s;--drift:-10px;"><span class="glyph" style="font-family:var(--mono);font-weight:600;">C</span></div>
+      <div class="bubble" style="left:68%;width:26px;height:26px;font-size:.75rem;opacity:.4;animation-duration:25s;animation-delay:-5s;--drift:12px;"><i class="fab fa-html5"></i></div>
+      <div class="bubble" style="left:86%;width:36px;height:36px;font-size:1rem;opacity:.5;animation-duration:20s;animation-delay:-11s;--drift:-16px;"><i class="fab fa-js"></i></div>
+    </div>
+    <!-- front layer: larger, faster, more opaque -->
+    <div class="bubbles-front">
+      <div class="bubble" style="left:12%;width:58px;height:58px;font-size:1.6rem;animation-duration:13s;animation-delay:-3s;--drift:22px;"><i class="fab fa-python"></i></div>
+      <div class="bubble" style="left:34%;width:46px;height:46px;font-size:1.3rem;animation-duration:16s;animation-delay:-8s;--drift:-20px;"><i class="fab fa-gem"></i></div>
+      <div class="bubble" style="left:58%;width:64px;height:64px;font-size:1.8rem;animation-duration:12s;animation-delay:-6s;--drift:18px;"><span class="glyph" style="font-family:var(--mono);font-weight:600;">C++</span></div>
+      <div class="bubble" style="left:78%;width:50px;height:50px;font-size:1.4rem;animation-duration:15s;animation-delay:-1s;--drift:-24px;"><i class="fas fa-terminal"></i></div>
+      <div class="bubble" style="left:94%;width:40px;height:40px;font-size:1.1rem;animation-duration:17s;animation-delay:-10s;--drift:14px;"><i class="fab fa-js"></i></div>
+    </div>
+  </div>
+  <div class="wrap hero-inner">
+    <div class="eyebrow">Maryville, MO</div>
+    <h1>Chase Staples builds things that<br><span>actually run.</span></h1>
+    <div class="role-line"><span id="typedRole"></span><span class="cursor"></span></div>
+    <div style="display:flex;gap:14px;flex-wrap:wrap;">
+      <a href="#projects" class="btn"><i class="fas fa-arrow-down"></i> View projects</a>
+      <a href="./ChaseStaplesResume.docx" download class="btn ghost"><i class="fas fa-file-arrow-down"></i> Resume</a>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What I work with</div>
+      <h2>Technical skills</h2>
+      <p>A working stack spanning the browser down to bare metal.</p>
+    </div>
+    <div class="skill-grid">
+      <div class="panel"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Web Design</h3><p>HTML, CSS, JavaScript, React, XML</p>
+      </div>
+      <div class="panel"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Languages</h3><p>Python, Java, C, C++, C#, ARM, Bash</p>
+      </div>
+      <div class="panel"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Tooling</h3><p>GitHub, Debian, VS Code, Visual Paradigm</p>
+      </div>
+      <div class="panel"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Hardware</h3><p>Built my own computer from scratch</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Selected work</div>
+      <h2>Projects</h2>
+      <p>Small, focused builds — each one solving one problem well.</p>
+    </div>
+    <div class="project-scroller">
+      <div class="panel project-card"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Ruby Project Manager</h3>
+        <p>Create, update, and delete projects, and attach tasks as they come up — a lightweight way to track work in progress.</p>
+        <div class="tags"><span>Ruby</span><span>CLI</span></div>
+      </div>
+      <div class="panel project-card"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Backtracking Sudoku Solver</h3>
+        <p>A backtracking algorithm that solves any valid Sudoku board, wrapped in a GUI so you can watch it work.</p>
+        <div class="tags"><span>Python</span><span>GUI</span><span>Algorithms</span></div>
+      </div>
+      <div class="panel project-card"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Pseudo Shell in C</h3>
+        <p>Parses raw shell arguments and a string vector to run a working pseudo-shell inside a C program, supporting basic shell commands.</p>
+        <div class="tags"><span>C</span><span>Systems</span></div>
+      </div>
+      <div class="panel project-card"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Java Encryption / Decryption</h3>
+        <p>Takes a menu selection and an input string, then encrypts or decrypts it based on the chosen method.</p>
+        <div class="tags"><span>Java</span><span>Security</span></div>
+      </div>
+    </div>
+    <a href="projects.html" class="text-link">View the full project showcase <i class="fas fa-arrow-right"></i></a>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div>
+      <div class="section-head" style="margin-bottom:32px;">
+        <div class="eyebrow">Proficiency</div>
+        <h2>Skill breakdown</h2>
+      </div>
+      <div class="bar-row" data-pct="90">
+        <div class="bar-label"><span><i class="fab fa-html5"></i>HTML / CSS</span><span>90%</span></div>
+        <div class="bar-track"><div class="bar-fill"></div></div>
+      </div>
+      <div class="bar-row" data-pct="95">
+        <div class="bar-label"><span><i class="fab fa-python"></i>Python</span><span>95%</span></div>
+        <div class="bar-track"><div class="bar-fill"></div></div>
+      </div>
+      <div class="bar-row" data-pct="70">
+        <div class="bar-label"><span><i class="fab fa-java"></i>Java</span><span>70%</span></div>
+        <div class="bar-track"><div class="bar-fill"></div></div>
+      </div>
+      <div class="bar-row" data-pct="50">
+        <div class="bar-label"><span><i class="fas fa-code"></i>C / C++</span><span>50%</span></div>
+        <div class="bar-track"><div class="bar-fill"></div></div>
+      </div>
+    </div>
+    <div class="about-copy">
+      <h3>About me</h3>
+      <h2>Software Engineer</h2>
+      <p style="margin-top:16px;">I'm an avid programmer who loves building projects that are fun, exciting, and genuinely worth learning from. My goal is to become a great software engineer and use that to make things better for the people around me.</p>
+      <p style="margin-top:16px;">I'm conscientious about my work and always looking to pick up new techniques — and eventually, to pass that knowledge on to the next generation of engineers.</p>
+      <a href="./ChaseStaplesResume.docx" download class="btn" style="margin-top:24px;"><i class="fas fa-file-arrow-down"></i> Download résumé</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Get in touch</div>
+      <h2>Contact info</h2>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div><h3>Phone</h3><p>+1 660 541 3009</p></div>
+      </div>
+      <div class="contact-card">
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+        <div><h3>Email</h3><p>Personal: chase_staples@hotmail.com<br>School: s528345@nwmissouri.edu</p></div>
+      </div>
+      <div class="contact-card">
+        <svg fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <div><h3>Address</h3><p>Maryville, MO</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="foot-brand">Chase<em>.</em>Staples</div>
+    <div class="social-row">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Chase Staples. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* header scroll state */
+const header = document.getElementById('site-header');
+document.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+/* mobile nav */
+const burger = document.getElementById('burger');
+const panel = document.getElementById('mobilePanel');
+function closeMenu(){
+  burger.classList.remove('active');
+  panel.classList.remove('active');
+  burger.setAttribute('aria-expanded','false');
+}
+burger.addEventListener('click', () => {
+  const open = burger.classList.toggle('active');
+  panel.classList.toggle('active', open);
+  burger.setAttribute('aria-expanded', String(open));
+});
+panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* dependency-free typing effect */
+const roles = ['Student','Developer','Engineer','Designer','Freelancer'];
+const roleEl = document.getElementById('typedRole');
+let ri = 0, ci = 0, deleting = false;
+function tick(){
+  const word = roles[ri];
+  if(!deleting){
+    ci++;
+    roleEl.textContent = word.slice(0,ci);
+    if(ci === word.length){ deleting = true; setTimeout(tick, 1400); return; }
+  } else {
+    ci--;
+    roleEl.textContent = word.slice(0,ci);
+    if(ci === 0){ deleting = false; ri = (ri+1) % roles.length; }
+  }
+  setTimeout(tick, deleting ? 55 : 95);
+}
+tick();
+
+/* skill bar fill on view */
+const bars = document.querySelectorAll('.bar-row');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const fill = e.target.querySelector('.bar-fill');
+      fill.style.width = e.target.dataset.pct + '%';
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:.4});
+bars.forEach(b => io.observe(b));
+
+/* login state — reflects the demo login.html / otp.html flow, shown inline in the nav */
+const acctSlot = document.getElementById('acctSlot');
+const acctSlotMobile = document.getElementById('acctSlotMobile');
+
+function signOut(){
+  sessionStorage.removeItem('loggedIn');
+  sessionStorage.removeItem('demoEmail');
+  refreshAuthUI();
+}
+
+function refreshAuthUI(){
+  const loggedIn = sessionStorage.getItem('loggedIn') === 'true';
+  const email = sessionStorage.getItem('demoEmail') || 'you';
+  if(loggedIn){
+    acctSlot.innerHTML = `<span class="acct-status"><i class="fas fa-circle-check" style="color:var(--success);"></i> <strong>${email}</strong> <button id="logoutBtn">Sign out</button></span>`;
+    document.getElementById('logoutBtn').addEventListener('click', signOut);
+    acctSlotMobile.textContent = 'Sign out';
+    acctSlotMobile.href = '#';
+    acctSlotMobile.onclick = (e) => { e.preventDefault(); signOut(); };
+  } else {
+    acctSlot.innerHTML = '<a href="login.html" class="acct"><i class="fas fa-arrow-right-to-bracket"></i> Sign in</a>';
+    acctSlotMobile.textContent = 'Sign in';
+    acctSlotMobile.href = 'login.html';
+    acctSlotMobile.onclick = null;
+  }
+}
+refreshAuthUI();
+</script>
+</body>
+</html>

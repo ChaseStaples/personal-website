@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Launchpad — Chase Staples</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="index.html" class="brand">Chase<em>.</em>Staples</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="launchpad.html">Launchpad</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li id="acctSlot"><a href="login.html" class="acct"><i class="fas fa-arrow-right-to-bracket"></i> Sign in</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="index.html">Home</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="launchpad.html">Launchpad</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="login.html" id="acctSlotMobile">Sign in</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Quick links</div>
+    <h1>Everywhere to<br><span>find me, in one place.</span></h1>
+    <p>A single jumping-off point — contact details, the rest of this site, and where I live elsewhere on the web.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+
+    <div class="lp-group">
+      <h2 class="lp-group-title">Contact</h2>
+      <div class="lp-grid">
+        <a class="lp-tile panel-link" href="mailto:chase_staples@hotmail.com">
+          <i class="fas fa-envelope"></i>
+          <span>Email</span>
+          <small>chase_staples@hotmail.com</small>
+        </a>
+        <a class="lp-tile panel-link" href="tel:+16605413009">
+          <i class="fas fa-phone"></i>
+          <span>Call</span>
+          <small>+1 660 541 3009</small>
+        </a>
+        <a class="lp-tile panel-link" href="index.html#contact">
+          <i class="fas fa-map-pin"></i>
+          <span>Location</span>
+          <small>Maryville, MO</small>
+        </a>
+      </div>
+    </div>
+
+    <div class="lp-group">
+      <h2 class="lp-group-title">This site</h2>
+      <div class="lp-grid">
+        <a class="lp-tile panel-link" href="index.html">
+          <i class="fas fa-house"></i>
+          <span>Home</span>
+          <small>Portfolio overview</small>
+        </a>
+        <a class="lp-tile panel-link" href="projects.html">
+          <i class="fas fa-diagram-project"></i>
+          <span>Projects</span>
+          <small>Full showcase, filterable</small>
+        </a>
+        <a class="lp-tile panel-link" href="dashboard.html">
+          <i class="fas fa-gauge-high"></i>
+          <span>Dashboard</span>
+          <small>Live status snapshot</small>
+        </a>
+        <a class="lp-tile panel-link" href="index.html#about">
+          <i class="fas fa-user"></i>
+          <span>About</span>
+          <small>Background &amp; bio</small>
+        </a>
+        <a class="lp-tile panel-link" href="./ChaseStaplesResume.docx" download>
+          <i class="fas fa-file-arrow-down"></i>
+          <span>Résumé</span>
+          <small>Download .docx</small>
+        </a>
+        <a class="lp-tile panel-link" href="login.html">
+          <i class="fas fa-arrow-right-to-bracket"></i>
+          <span>Sign in</span>
+          <small>Demo auth flow</small>
+        </a>
+      </div>
+    </div>
+
+    <div class="lp-group">
+      <h2 class="lp-group-title">Elsewhere</h2>
+      <div class="lp-grid">
+        <a class="lp-tile panel-link" href="#" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+          <span>GitHub</span>
+          <small>Code &amp; repos</small>
+        </a>
+        <a class="lp-tile panel-link" href="#" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin-in"></i>
+          <span>LinkedIn</span>
+          <small>Professional profile</small>
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="foot-brand">Chase<em>.</em>Staples</div>
+    <div class="social-row">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Chase Staples. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* header scroll state */
+const header = document.getElementById('site-header');
+document.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+/* mobile nav */
+const burger = document.getElementById('burger');
+const panel = document.getElementById('mobilePanel');
+function closeMenu(){
+  burger.classList.remove('active');
+  panel.classList.remove('active');
+  burger.setAttribute('aria-expanded','false');
+}
+burger.addEventListener('click', () => {
+  const open = burger.classList.toggle('active');
+  panel.classList.toggle('active', open);
+  burger.setAttribute('aria-expanded', String(open));
+});
+panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* login state — mirrors index.html */
+const acctSlot = document.getElementById('acctSlot');
+const acctSlotMobile = document.getElementById('acctSlotMobile');
+function signOut(){
+  sessionStorage.removeItem('loggedIn');
+  sessionStorage.removeItem('demoEmail');
+  refreshAuthUI();
+}
+function refreshAuthUI(){
+  const loggedIn = sessionStorage.getItem('loggedIn') === 'true';
+  const email = sessionStorage.getItem('demoEmail') || 'you';
+  if(loggedIn){
+    acctSlot.innerHTML = `<span class="acct-status"><i class="fas fa-circle-check" style="color:var(--success);"></i> <strong>${email}</strong> <button id="logoutBtn">Sign out</button></span>`;
+    document.getElementById('logoutBtn').addEventListener('click', signOut);
+    acctSlotMobile.textContent = 'Sign out';
+    acctSlotMobile.href = '#';
+    acctSlotMobile.onclick = (e) => { e.preventDefault(); signOut(); };
+  } else {
+    acctSlot.innerHTML = '<a href="login.html" class="acct"><i class="fas fa-arrow-right-to-bracket"></i> Sign in</a>';
+    acctSlotMobile.textContent = 'Sign in';
+    acctSlotMobile.href = 'login.html';
+    acctSlotMobile.onclick = null;
+  }
+}
+refreshAuthUI();
+</script>
+</body>
+</html>

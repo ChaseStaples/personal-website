@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Chase Staples</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="index.html" class="brand">Chase<em>.</em>Staples</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="launchpad.html">Launchpad</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li id="acctSlot"><a href="login.html" class="acct"><i class="fas fa-arrow-right-to-bracket"></i> Sign in</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="index.html">Home</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="launchpad.html">Launchpad</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="login.html" id="acctSlotMobile">Sign in</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Full showcase</div>
+    <h1>Everything I've<br><span>shipped and broken.</span></h1>
+    <p>The complete list — small, focused builds, each one solving one problem well. Filter by language or category to jump straight to what you're after.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="filter-bar" id="filterBar" role="group" aria-label="Filter projects by tag">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="python">Python</button>
+      <button class="filter-pill" data-filter="java">Java</button>
+      <button class="filter-pill" data-filter="c">C</button>
+      <button class="filter-pill" data-filter="ruby">Ruby</button>
+      <button class="filter-pill" data-filter="cli">CLI</button>
+      <button class="filter-pill" data-filter="gui">GUI</button>
+      <button class="filter-pill" data-filter="algorithms">Algorithms</button>
+      <button class="filter-pill" data-filter="systems">Systems</button>
+      <button class="filter-pill" data-filter="security">Security</button>
+    </div>
+
+    <div class="project-grid-full" id="projectGrid">
+      <div class="panel project-card" data-tags="ruby,cli"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Ruby Project Manager</h3>
+        <p>Create, update, and delete projects, and attach tasks as they come up — a lightweight way to track work in progress.</p>
+        <div class="tags"><span>Ruby</span><span>CLI</span></div>
+      </div>
+      <div class="panel project-card" data-tags="python,gui,algorithms"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Backtracking Sudoku Solver</h3>
+        <p>A backtracking algorithm that solves any valid Sudoku board, wrapped in a GUI so you can watch it work.</p>
+        <div class="tags"><span>Python</span><span>GUI</span><span>Algorithms</span></div>
+      </div>
+      <div class="panel project-card" data-tags="c,systems"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Pseudo Shell in C</h3>
+        <p>Parses raw shell arguments and a string vector to run a working pseudo-shell inside a C program, supporting basic shell commands.</p>
+        <div class="tags"><span>C</span><span>Systems</span></div>
+      </div>
+      <div class="panel project-card" data-tags="java,security"><div class="br-bl"></div><div class="br-br"></div>
+        <h3>Java Encryption / Decryption</h3>
+        <p>Takes a menu selection and an input string, then encrypts or decrypts it based on the chosen method.</p>
+        <div class="tags"><span>Java</span><span>Security</span></div>
+      </div>
+      <a href="#" class="panel project-card cta-card panel-link" data-tags="all">
+        <i class="fab fa-github"></i>
+        <h3>More on GitHub</h3>
+        <p>Additional repos, experiments, and works in progress live on my GitHub profile.</p>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="foot-brand">Chase<em>.</em>Staples</div>
+    <div class="social-row">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Chase Staples. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* header scroll state */
+const header = document.getElementById('site-header');
+document.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+/* mobile nav */
+const burger = document.getElementById('burger');
+const panel = document.getElementById('mobilePanel');
+function closeMenu(){
+  burger.classList.remove('active');
+  panel.classList.remove('active');
+  burger.setAttribute('aria-expanded','false');
+}
+burger.addEventListener('click', () => {
+  const open = burger.classList.toggle('active');
+  panel.classList.toggle('active', open);
+  burger.setAttribute('aria-expanded', String(open));
+});
+panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* login state — mirrors index.html */
+const acctSlot = document.getElementById('acctSlot');
+const acctSlotMobile = document.getElementById('acctSlotMobile');
+function signOut(){
+  sessionStorage.removeItem('loggedIn');
+  sessionStorage.removeItem('demoEmail');
+  refreshAuthUI();
+}
+function refreshAuthUI(){
+  const loggedIn = sessionStorage.getItem('loggedIn') === 'true';
+  const email = sessionStorage.getItem('demoEmail') || 'you';
+  if(loggedIn){
+    acctSlot.innerHTML = `<span class="acct-status"><i class="fas fa-circle-check" style="color:var(--success);"></i> <strong>${email}</strong> <button id="logoutBtn">Sign out</button></span>`;
+    document.getElementById('logoutBtn').addEventListener('click', signOut);
+    acctSlotMobile.textContent = 'Sign out';
+    acctSlotMobile.href = '#';
+    acctSlotMobile.onclick = (e) => { e.preventDefault(); signOut(); };
+  } else {
+    acctSlot.innerHTML = '<a href="login.html" class="acct"><i class="fas fa-arrow-right-to-bracket"></i> Sign in</a>';
+    acctSlotMobile.textContent = 'Sign in';
+    acctSlotMobile.href = 'login.html';
+    acctSlotMobile.onclick = null;
+  }
+}
+refreshAuthUI();
+
+/* project tag filter */
+const filterBar = document.getElementById('filterBar');
+const cards = Array.from(document.querySelectorAll('#projectGrid .project-card'));
+filterBar.addEventListener('click', (e) => {
+  const btn = e.target.closest('.filter-pill');
+  if(!btn) return;
+  filterBar.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  const filter = btn.dataset.filter;
+  cards.forEach(card => {
+    const tags = (card.dataset.tags || '').split(',');
+    const match = filter === 'all' || tags.includes(filter);
+    card.classList.toggle('hidden', !match);
+  });
+});
+</script>
+</body>
+</html>

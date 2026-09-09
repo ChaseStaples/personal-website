@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard — Chase Staples</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header id="site-header">
+  <nav class="wrap">
+    <a href="index.html" class="brand">Chase<em>.</em>Staples</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="launchpad.html">Launchpad</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li id="acctSlot"><a href="login.html" class="acct"><i class="fas fa-arrow-right-to-bracket"></i> Sign in</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+  <div class="mobile-panel" id="mobilePanel">
+    <a href="index.html">Home</a>
+    <a href="index.html#skills">Skills</a>
+    <a href="projects.html">Projects</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="launchpad.html">Launchpad</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+    <a href="login.html" id="acctSlotMobile">Sign in</a>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Home base</div>
+    <h1>A quick read on<br><span>where things stand.</span></h1>
+    <p>A live-ish snapshot of what I'm doing right now, updated in your browser as you look at it. No backend, no tracking — just the page doing a bit of math with the clock.</p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap">
+    <div class="dash-grid">
+
+      <div class="panel dash-card dash-wide">
+        <div class="eyebrow">Right now</div>
+        <div class="dash-clock" id="dashClock">--:--:--</div>
+        <div class="dash-date" id="dashDate">—</div>
+        <div class="dash-greeting" id="dashGreeting">Hello.</div>
+      </div>
+
+      <div class="panel dash-card">
+        <div class="eyebrow">Status</div>
+        <ul class="status-list">
+          <li><span class="dot dot-live"></span>Open to software engineering roles</li>
+          <li><span class="dot dot-amber"></span>Building — JARVIS, a voice-controlled personal assistant</li>
+          <li><span class="dot dot-amber"></span>Studying — Computer Science, Northwest Missouri State</li>
+        </ul>
+      </div>
+
+      <div class="panel dash-card">
+        <div class="eyebrow">Session uptime</div>
+        <div class="stat-number" id="uptimeCounter">00:00:00</div>
+        <p class="stat-note">Counting since this page loaded in your browser — a bit of fun, not a real server metric.</p>
+      </div>
+
+      <div class="panel dash-card">
+        <div class="eyebrow">Jump to</div>
+        <div class="dash-links">
+          <a href="index.html" class="dash-link-tile"><i class="fas fa-house"></i>Home</a>
+          <a href="projects.html" class="dash-link-tile"><i class="fas fa-diagram-project"></i>Projects</a>
+          <a href="launchpad.html" class="dash-link-tile"><i class="fas fa-rocket"></i>Launchpad</a>
+          <a href="./ChaseStaplesResume.docx" download class="dash-link-tile"><i class="fas fa-file-arrow-down"></i>Résumé</a>
+        </div>
+      </div>
+
+      <div class="panel dash-card dash-wide">
+        <div class="eyebrow">Skill snapshot</div>
+        <div class="bar-row" data-pct="95">
+          <div class="bar-label"><span><i class="fab fa-python"></i>Python</span><span>95%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-pct="90">
+          <div class="bar-label"><span><i class="fab fa-html5"></i>HTML / CSS</span><span>90%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <div class="bar-row" data-pct="70">
+          <div class="bar-label"><span><i class="fab fa-java"></i>Java</span><span>70%</span></div>
+          <div class="bar-track"><div class="bar-fill"></div></div>
+        </div>
+        <a href="index.html#about" class="text-link">Full breakdown <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="foot-brand">Chase<em>.</em>Staples</div>
+    <div class="social-row">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p class="copyright">© <span id="year"></span> Chase Staples. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* header scroll state */
+const header = document.getElementById('site-header');
+document.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+}, {passive:true});
+
+/* mobile nav */
+const burger = document.getElementById('burger');
+const panel = document.getElementById('mobilePanel');
+function closeMenu(){
+  burger.classList.remove('active');
+  panel.classList.remove('active');
+  burger.setAttribute('aria-expanded','false');
+}
+burger.addEventListener('click', () => {
+  const open = burger.classList.toggle('active');
+  panel.classList.toggle('active', open);
+  burger.setAttribute('aria-expanded', String(open));
+});
+panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* login state — mirrors index.html */
+const acctSlot = document.getElementById('acctSlot');
+const acctSlotMobile = document.getElementById('acctSlotMobile');
+function signOut(){
+  sessionStorage.removeItem('loggedIn');
+  sessionStorage.removeItem('demoEmail');
+  refreshAuthUI();
+}
+function refreshAuthUI(){
+  const loggedIn = sessionStorage.getItem('loggedIn') === 'true';
+  const email = sessionStorage.getItem('demoEmail') || 'you';
+  if(loggedIn){
+    acctSlot.innerHTML = `<span class="acct-status"><i class="fas fa-circle-check" style="color:var(--success);"></i> <strong>${email}</strong> <button id="logoutBtn">Sign out</button></span>`;
+    document.getElementById('logoutBtn').addEventListener('click', signOut);
+    acctSlotMobile.textContent = 'Sign out';
+    acctSlotMobile.href = '#';
+    acctSlotMobile.onclick = (e) => { e.preventDefault(); signOut(); };
+  } else {
+    acctSlot.innerHTML = '<a href="login.html" class="acct"><i class="fas fa-arrow-right-to-bracket"></i> Sign in</a>';
+    acctSlotMobile.textContent = 'Sign in';
+    acctSlotMobile.href = 'login.html';
+    acctSlotMobile.onclick = null;
+  }
+}
+refreshAuthUI();
+
+/* skill bar fill on view — mirrors index.html */
+const bars = document.querySelectorAll('.bar-row');
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting){
+      const fill = e.target.querySelector('.bar-fill');
+      fill.style.width = e.target.dataset.pct + '%';
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold:.4});
+bars.forEach(b => io.observe(b));
+
+/* live clock + date + time-of-day greeting */
+const clockEl = document.getElementById('dashClock');
+const dateEl = document.getElementById('dashDate');
+const greetEl = document.getElementById('dashGreeting');
+function greetingFor(hour){
+  if(hour < 5) return "Burning the midnight oil, or up very early — either way, welcome.";
+  if(hour < 12) return "Good morning.";
+  if(hour < 17) return "Good afternoon.";
+  if(hour < 21) return "Good evening.";
+  return "Late one. Good evening.";
+}
+function tickClock(){
+  const now = new Date();
+  clockEl.textContent = now.toLocaleTimeString('en-US', {hour12:false});
+  dateEl.textContent = now.toLocaleDateString('en-US', {weekday:'long', year:'numeric', month:'long', day:'numeric'}) + ' · Maryville, MO';
+  greetEl.textContent = greetingFor(now.getHours());
+}
+tickClock();
+setInterval(tickClock, 1000);
+
+/* session uptime */
+const uptimeStart = Date.now();
+const uptimeEl = document.getElementById('uptimeCounter');
+function pad(n){ return String(n).padStart(2,'0'); }
+function tickUptime(){
+  const secs = Math.floor((Date.now() - uptimeStart) / 1000);
+  const h = Math.floor(secs / 3600);
+  const m = Math.floor((secs % 3600) / 60);
+  const s = secs % 60;
+  uptimeEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+}
+tickUptime();
+setInterval(tickUptime, 1000);
+</script>
+</body>
+</html>

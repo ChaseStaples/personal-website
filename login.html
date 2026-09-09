@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign in — Chase Staples</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a href="index.html" class="brand">Chase<em>.</em>Staples</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Back to site</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="auth-shell">
+  <div class="panel auth-card">
+    <div class="br-bl"></div><div class="br-br"></div>
+    <span class="auth-badge">DEMO · AUTH FLOW</span>
+    <h1>Sign in</h1>
+    <p class="sub">Enter any email and password — this is a front-end demo, not a real account system.</p>
+
+    <form id="loginForm">
+      <div class="field">
+        <label for="email">Email or phone</label>
+        <input type="text" id="email" placeholder="you@example.com" autocomplete="username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="••••••••" autocomplete="current-password" required>
+      </div>
+      <button type="submit" class="btn" style="width:100%;justify-content:center;">
+        <i class="fas fa-arrow-right-to-bracket"></i> Continue
+      </button>
+      <p class="auth-error" id="loginError">Enter something in both fields to continue.</p>
+    </form>
+
+    <p class="auth-note">This is a portfolio demo: no server, no real account, no data is stored beyond your browser tab. Submitting takes you to a one-time-code step — the working demo code is <b>1234</b>.</p>
+  </div>
+</div>
+
+<script>
+document.getElementById('loginForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const email = document.getElementById('email').value.trim();
+  const pass = document.getElementById('password').value.trim();
+  const err = document.getElementById('loginError');
+  if(!email || !pass){
+    err.classList.add('show');
+    return;
+  }
+  err.classList.remove('show');
+  sessionStorage.setItem('demoEmail', email);
+  window.location.href = 'otp.html';
+});
+</script>
+</body>
+</html>
